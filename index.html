@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-wrapper">
+    <form
+      action="https://teach-backend-fawn.vercel.app/api/product"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+
+      <!-- General Info -->
+      <fieldset>
+        <legend>General Info</legend>
+
+        <div class="field-row">
+          <div class="field-label">Item Name</div>
+          <div class="field-control">
+            <input type="text" name="itemName">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label">Description</div>
+          <div class="field-control">
+            <textarea name="itemDescription"></textarea>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label">Category</div>
+          <div class="field-control">
+            <select name="category">
+              <option value="notSpecified">notSpecified</option>
+              <option value="consumption">consumption</option>
+              <option value="household">household</option>
+              <option value="electronic" selected>electronic</option>
+              <option value="gadget">gadget</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Misc. -->
+      <fieldset>
+        <legend>Misc.</legend>
+
+        <div class="field-row">
+          <div class="field-label">Inventory Amount</div>
+          <div class="field-control">
+            <input type="number" name="inventoryAmount">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label">List price</div>
+          <div class="field-control">
+            <input type="number" name="listPrice">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label">Available Stores</div>
+          <div class="field-control">
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="availableStore[]" value="Bangkok"> Bangkok</label>
+              <label><input type="checkbox" name="availableStore[]" value="Pattaya"> Pattaya</label>
+              <label><input type="checkbox" name="availableStore[]" value="Phuket"> Phuket</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label">Available Stores</div>
+          <div class="field-control">
+            <div class="radio-group">
+              <label><input type="radio" name="status" value="Active"> Active</label>
+              <label><input type="radio" name="status" value="Inactive"> Inactive</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Staff -->
+      <fieldset>
+        <legend>Staff</legend>
+
+        <div class="field-row">
+          <div class="field-label">Staff Email</div>
+          <div class="field-control">
+            <div class="email-wrapper">
+              <input type="email" name="staffEmail">
+              <div class="email-btn"></div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Submit -->
+      <div class="submit-row">
+        <input type="submit" value="Submit Form">
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

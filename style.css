@@ -1,0 +1,171 @@
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background: #fff;
+      color: #000;
+      padding: 20px;
+    }
+
+    .form-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Fieldset section styling */
+    fieldset {
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 16px 20px 20px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    legend {
+      padding: 0 6px;
+      font-size: 14px;
+      color: #000;
+      font-weight: normal;
+    }
+
+    /* Row layout: label + input */
+    .field-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .field-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .field-label {
+      width: 200px;
+      min-width: 200px;
+      padding-top: 4px;
+      font-size: 14px;
+    }
+
+    .field-control {
+      flex: 1;
+    }
+
+    /* Inputs */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    select {
+      border: 1px solid #767676;
+      border-radius: 2px;
+      padding: 3px 5px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      width: 260px;
+      height: 26px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 130px;
+      resize: vertical;
+    }
+
+    select {
+      height: 26px;
+      padding: 2px 4px;
+    }
+
+    /* Email field with the red button */
+    .email-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      width: 260px;
+    }
+
+    .email-wrapper input[type="email"] {
+      width: 100%;
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .email-btn {
+      background-color: #c0392b;
+      border: 1px solid #767676;
+      border-left: none;
+      border-radius: 0 2px 2px 0;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .email-btn::after {
+      content: "···";
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    /* Checkboxes & Radios */
+    .checkbox-group,
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      padding-top: 3px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    /* Submit button */
+    .submit-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #00c;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0000aa;
+    }
